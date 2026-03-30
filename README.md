@@ -1,7 +1,7 @@
 ### Run
 
 ```shel
-docker compose up --build
+dart lib/serve.dart
 ```
 
 ## Examples
