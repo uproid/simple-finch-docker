@@ -19,7 +19,7 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -349,14 +349,22 @@
 
         /* ── Mobile ── */
         @media (max-width: 640px) {
+            .nav-inner { flex-direction: row; gap: 8px; justify-content: space-between; }
+            nav { padding: 12px 0; }
+            .logo { font-size: 1em; gap: 8px; }
+            .logo-icon { width: 32px; height: 32px; font-size: 14px; }
             .nav-links { gap: 4px; }
-            .nav-link { padding: 8px 10px; font-size: 0.85em; }
-            .hero { padding: 100px 20px 60px; }
-            .hero p { font-size: 1em; }
-            .hero-buttons { flex-direction: column; align-items: stretch; }
-            .btn { justify-content: center; }
+            .nav-link { padding: 6px 10px; font-size: 0.85em; }
+            .hero { padding: 120px 20px 60px; }
+            .hero h1 { font-size: 2.2em; }
+            .hero p { font-size: 1em; margin-bottom: 32px; }
+            .hero-buttons { flex-direction: column; align-items: stretch; width: 100%; }
+            .btn { justify-content: center; width: 100%; }
             .docs { padding: 0 20px 80px; }
-            .footer-inner { flex-direction: column; text-align: center; }
+            .doc-section { padding: 20px; }
+            .code-block { font-size: 0.75em; padding: 16px; }
+            .footer-inner { flex-direction: column; text-align: center; gap: 24px; }
+            .footer-links { justify-content: center; width: 100%; flex-wrap: wrap; }
         }
     </style>
 </head>
