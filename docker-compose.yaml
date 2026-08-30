@@ -5,8 +5,12 @@ services:
     working_dir: /www
     ports:
       - "80:80"
+      - "8181:8181"
+      - "8282:8282"
     volumes:
       - ./lib:/www/lib
       - ./public:/www/public
       - ./pubspec.yaml:/www/pubspec.yaml
+    stdin_open: true
+    tty: true
     command: ["sh", "-c", "finch get && finch serve -p /www/lib/serve.dart"]
